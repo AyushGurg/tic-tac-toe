@@ -1,8 +1,24 @@
+body {
+  font-family: "Tilt Neon", "Courier New", Courier, monospace;
+  background-color: rgb(39, 80, 30);
+  color: bisque;
+}
+
+.o {
+  translate: 88%;
+}
+.x {
+  translate: 110%;
+}
+.o,
+.x {
+  position: fixed;
+  transform: scale(0);
+}
 #header {
   text-align: center;
   font-size: xx-large;
   margin: 50px 0;
-  font-family: "Tilt Neon", "Courier New", Courier, monospace;
 }
 .gameboard {
   position: fixed;
@@ -25,8 +41,15 @@
 .row-0,
 .row-1,
 .row-2 {
-  border-bottom: 5px solid black;
-  border-right: 5px solid black;
+  border-bottom: 5px solid bisque;
+  border-right: 5px solid bisque;
+
+  font-size: 100px;
+}
+
+.o.active,
+.x.active {
+  transform: scale(1);
 }
 
 .col-2 {
